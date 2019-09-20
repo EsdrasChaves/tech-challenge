@@ -4,6 +4,7 @@ import GenericPage from '../../components/GenericPage/GenericPage'
 import UserCard from '../../components/UserCard/UserCard'
 import { isAuthenticated } from '../../services/auth'
 
+
 const UsersPage = ({ history, handleLogin }) => {
 
   const [ userList, setUserList ] = useState([])
@@ -31,11 +32,11 @@ const UsersPage = ({ history, handleLogin }) => {
   }
 
   return (
-      <GenericPage isLoading={isLoading} title="Pick a user below">
-        { userList.map((user, index) => (
-          <UserCard key={index} handleClick={handleItemClick} user={user} />
-        ))}
-      </GenericPage>
+    <GenericPage isLoading={isLoading} title="Select a user below">
+      { userList.map((user, index) => (
+        <UserCard key={index} handleClick={handleItemClick} user={user} />
+      ))}
+    </GenericPage>
   )
 }
 

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 
 import GenericPage from '../../components/GenericPage/GenericPage'
 import PhotoCard from '../../components/PhotoCard/PhotoCard'
+import Modal from '../../components/Modal/Modal'
+
+import './PhotosPage.css'
 
 
 const PhotosPage = ({ match }) => {
@@ -43,6 +46,8 @@ const PhotosPage = ({ match }) => {
           <PhotoCard key={index} photo={photo} handleClick={handleSetCurrentPhoto}/>
         ))}
       </GenericPage>
+
+      { currentPhoto && <Modal closeModal={removeCurrentPhoto}><img className="photo" alt="currentPhoto" src={currentPhoto}/></Modal>}
     </>
   )
 }

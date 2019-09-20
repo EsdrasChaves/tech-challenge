@@ -7,7 +7,6 @@ import './GenericPage.css'
 
 
 const GenericPage = ({ children, title, backPath }) => {
-  console.log(children)
   return (
     <div className="container generic-page__container">
       <h2 className="generic-page__title">{title}</h2>

@@ -26,7 +26,6 @@ function App({ history }) {
 
   const handleLogin = user => {
     if (user) {
-      console.log('login')
       login(user)
       setCurrentUser(user)
     }

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 import GenericPage from '../../components/GenericPage/GenericPage'
 import AlbumCard from '../../components/AlbumCard/AlbumCard'
-
 import { getLoggedUser } from '../../services/auth'
+
 
 const AlbumsPage = ({ history, match }) => {
 
