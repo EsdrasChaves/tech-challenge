@@ -4,10 +4,41 @@
   --g-c-secondary: #58585A;
 }
 
-body {
+html, body, div, span, h1, h2, p {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Raleway', sans-serif;
+  height: 200vh;
+  background-color: var(--g-c-secondary);
+}
+
+.container {
+  max-width: 1920px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.button {
+  border: 2px solid var(--g-c-primary);
+  padding: .8em 1.5em;
+  border-radius: 100px;
+  color: var(--g-c-primary);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all linear .2s;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--g-c-primary);
+}
+
+.button--icon .button__text {
+  margin-left: .8em;
+}

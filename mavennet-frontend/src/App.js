@@ -6,6 +6,7 @@ import AlbumsPage from './pages/AlbumsPage/AlbumsPage'
 import PhotosPage from './pages/PhotosPage/PhotosPage'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import Header from './components/Header/Header'
 
 import { login, logout, isAuthenticated, getLoggedUser } from './services/auth'
 
@@ -38,13 +39,12 @@ function App() {
 
   return (
     <div className="App">
+      <Header
+        currentUser={currentUser}
+        handleLogout={handleLogout} />
 
-      { currentUser ? 
-        (<button onClick={e => {
-          e.preventDefault()
-          handleLogout()
-        }}>Logout</button>)
-        : (<button onClick={ e =>{
+      { !currentUser && (
+        <button onClick={ e =>{
           e.preventDefault()
           handleLogin({
             name: "Esdras"
