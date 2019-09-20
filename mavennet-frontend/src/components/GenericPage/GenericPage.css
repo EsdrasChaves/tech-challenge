@@ -1,0 +1,40 @@
+.generic-page__container {
+  padding: 2em;
+}
+
+.generic-page__title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.generic-page__back-message {
+  display: inline-block;
+  margin-top: 1em;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: linear .2s all;
+}
+
+.generic-page__back-message:hover {
+  color: var(--g-c-secondary);
+}
+
+.generic-page__back-title {
+  margin-left: .4em;
+}
+
+.generic-page__list {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+}
+
+@media (max-width: 720px) {
+  .generic-page__container {
+    padding: 2em 0;
+  }
+}

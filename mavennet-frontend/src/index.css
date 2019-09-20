@@ -2,19 +2,24 @@
   --g-c-primary: #60269d;
   --g-c-primary-light: #8b1070;
   --g-c-secondary: #58585A;
+  --g-c-secondary-light: #f0f0f0;
 }
 
-html, body, div, span, h1, h2, p {
+html, body, div, span, h1, h2, p, ul {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   height: 200vh;
-  background-color: var(--g-c-secondary);
+  background-color: var(--g-c-primary);
 }
 
 .container {
