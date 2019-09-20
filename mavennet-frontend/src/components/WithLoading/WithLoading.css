@@ -7,8 +7,8 @@
 }
 
 .loader {
-  border: 16px solid var(--g-c-primary-light);
-  border-top: 16px solid var(--g-c-primary-dark);
+  border: 16px solid var(--g-c-secondary-light);
+  border-top: 16px solid var(--g-c-primary);
   border-radius: 50%;
   width: 120px;
   height: 120px;

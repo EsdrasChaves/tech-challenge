@@ -56,7 +56,7 @@ function App() {
 
       <div className="app__main-content">
         <Switch>
-          <Route path="/" exact component={UsersPage} />
+          <Route path="/" exact render={props => <UsersPage {...props} handleLogin={handleLogin} />} />
           <ProtectedRoute path="/albums" exact component={AlbumsPage} />
           <ProtectedRoute path="/albums/:albumId" exact component={PhotosPage} />
           <Route path="*" component={NotFoundPage} />
