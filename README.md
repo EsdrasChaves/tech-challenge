@@ -1,13 +1,7 @@
 # Mavennet front end code challenge
-## Running
+## Running the app
 ```sh
-cd mavennet-frontend
-```
-
-```sh
-yarn install
-```
-
-```sh
-yarn start
+> cd mavennet-frontend
+> yarn install
+> yarn start
 ```
