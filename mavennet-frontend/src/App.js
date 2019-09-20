@@ -13,7 +13,7 @@ import { login, logout, isAuthenticated, getLoggedUser } from './services/auth'
 import './App.css';
 
 
-function App() {
+function App({ history }) {
 
   const [ currentUser, setCurrentUser ] = useState(null)
 
@@ -35,6 +35,7 @@ function App() {
   const handleLogout = () => {
     logout()
     setCurrentUser(null)
+    history.push('/')
   }
 
   return (
@@ -55,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);
