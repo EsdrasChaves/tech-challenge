@@ -5,6 +5,7 @@ import UsersPage from './pages/UsersPage/UsersPage'
 import AlbumsPage from './pages/AlbumsPage/AlbumsPage'
 import PhotosPage from './pages/PhotosPage/PhotosPage'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 import { login, logout, isAuthenticated, getLoggedUser } from './services/auth'
 
@@ -56,8 +57,8 @@ function App() {
       <div className="app__main-content">
         <Switch>
           <Route path="/" exact component={UsersPage} />
-          <Route path="/albums" exact component={AlbumsPage} />
-          <Route path="/albums/:albumId" exact component={PhotosPage} />
+          <ProtectedRoute path="/albums" exact component={AlbumsPage} />
+          <ProtectedRoute path="/albums/:albumId" exact component={PhotosPage} />
           <Route path="*" component={NotFoundPage} />
         </Switch>
       </div>
