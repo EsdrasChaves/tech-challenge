@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import GenericPage from '../../components/GenericPage/GenericPage'
+import UserCard from '../../components/UserCard/UserCard'
 import { isAuthenticated } from '../../services/auth'
 
 const UsersPage = ({ history, handleLogin }) => {
@@ -32,7 +33,7 @@ const UsersPage = ({ history, handleLogin }) => {
   return (
       <GenericPage isLoading={isLoading} title="Pick a user below">
         { userList.map((user, index) => (
-          <li key={index} onClick={() => handleItemClick(user)}>{user.name}</li>
+          <UserCard key={index} handleClick={handleItemClick} user={user} />
         ))}
       </GenericPage>
   )

@@ -43,17 +43,6 @@ function App() {
         currentUser={currentUser}
         handleLogout={handleLogout} />
 
-      { !currentUser && (
-        <button onClick={ e =>{
-          e.preventDefault()
-          handleLogin({
-            name: "Esdras"
-          })
-        }}>Login</button>)
-      }
-
-      <div>{JSON.stringify(currentUser)}</div>
-
       <div className="app__main-content">
         <Switch>
           <Route path="/" exact render={props => <UsersPage {...props} handleLogin={handleLogin} />} />
