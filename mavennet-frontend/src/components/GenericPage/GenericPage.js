@@ -7,6 +7,7 @@ import './GenericPage.css'
 
 
 const GenericPage = ({ children, title, backPath }) => {
+  console.log(children)
   return (
     <div className="container generic-page__container">
       <h2 className="generic-page__title">{title}</h2>
@@ -14,6 +15,8 @@ const GenericPage = ({ children, title, backPath }) => {
       <ul className="generic-page__list">
         { children }
       </ul>
+      
+      { children.length === 0 && <span className="generic-page__not-found-message">There is no results for that :(</span>}
     </div>
   )
 }

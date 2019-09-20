@@ -33,6 +33,12 @@
   gap: 1em;
 }
 
+.generic-page__not-found-message {
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 720px) {
   .generic-page__container {
     padding: 2em 0;
